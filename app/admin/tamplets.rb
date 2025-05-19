@@ -10,7 +10,7 @@ ActiveAdmin.register Tamplet do
   # or
   #
   # permit_params do
-  #   permitted = [:language, :message, :usecase]
+    permit_params :language, :message, :usecase
   #   permitted << :other if params[:action] == 'create' && current_user.admin?
   #   permitted
   # end
