@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Panel</title>
+  
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
+
+  <%= stylesheet_link_tag 'active_admin', media: 'all' %>
+  <%= javascript_include_tag 'active_admin', 'data-turbolinks-track': 'reload' %>
+
+  <%= yield :head %> <!-- Allows additional head content to be added if needed -->
+</head>
+
+<body>
+  <div class="wrapper">
+    <%= yield %> <!-- Main content of ActiveAdmin will be injected here -->
+  </div>
+</body>
+</html>

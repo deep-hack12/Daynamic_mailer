@@ -1,9 +1,9 @@
 Rails.application.routes.draw do
-  get "tamplet/index"
-  get "tamplet/new"
-  get "tamplet/show"
-  get "tamplet/destroy"
-  get "tamplet/create"
+  get "templates/index"
+  get "templates/new"
+  get "templates/show"
+  get "templates/destroy"
+  get "templates/create"
   ActiveAdmin.routes(self)
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
@@ -16,5 +16,8 @@ Rails.application.routes.draw do
   # get "service-worker" => "rails/pwa#service_worker", as: :pwa_service_worker
 
   # Defines the root path route ("/")
-  # root "posts#index"
+   root "users#index"
+   resources :users, param: :_username
+   post 'login', to: 'authentication#login'
+   post '/auth/login', to: 'authentication#login'
 end

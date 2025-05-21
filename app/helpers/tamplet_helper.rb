@@ -1,2 +1,0 @@
-module TampletHelper
-end
