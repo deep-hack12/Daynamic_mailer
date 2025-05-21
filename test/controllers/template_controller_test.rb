@@ -1,28 +1,28 @@
 require "test_helper"
 
-class TampletControllerTest < ActionDispatch::IntegrationTest
+class TemplateControllerTest < ActionDispatch::IntegrationTest
   test "should get index" do
-    get tamplet_index_url
+    get template_index_url
     assert_response :success
   end
 
   test "should get new" do
-    get tamplet_new_url
+    get template_new_url
     assert_response :success
   end
 
   test "should get show" do
-    get tamplet_show_url
+    get template_show_url
     assert_response :success
   end
 
   test "should get destroy" do
-    get tamplet_destroy_url
+    get template_destroy_url
     assert_response :success
   end
 
   test "should get create" do
-    get tamplet_create_url
+    get template_create_url
     assert_response :success
   end
 end

@@ -2,14 +2,8 @@
 
 one:
   language: MyString
-  ,: MyString
-  message: MyString
-  ,: MyString
-  usecase: MyString
+  status: MyString
 
 two:
   language: MyString
-  ,: MyString
-  message: MyString
-  ,: MyString
-  usecase: MyString
+  status: MyString
