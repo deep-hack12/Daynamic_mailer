@@ -93,6 +93,7 @@ GEM
       ruby2_keywords (>= 0.0.2)
     ast (2.4.3)
     base64 (0.2.0)
+    bcrypt (3.1.20)
     bcrypt_pbkdf (1.1.1)
     bcrypt_pbkdf (1.1.1-x64-mingw-ucrt)
     benchmark (0.4.0)
@@ -300,6 +301,8 @@ GEM
       i18n
     rdoc (6.13.1)
       psych (>= 4.0.0)
+    redis-client (0.24.0)
+      connection_pool
     regexp_parser (2.10.0)
     reline (0.6.1)
       io-console (~> 0.5)
@@ -349,12 +352,18 @@ GEM
       sprockets-rails
       tilt
     securerandom (0.4.1)
-    selenium-webdriver (4.32.0)
+    selenium-webdriver (4.33.0)
       base64 (~> 0.2)
       logger (~> 1.4)
       rexml (~> 3.2, >= 3.2.5)
       rubyzip (>= 1.2.2, < 3.0)
       websocket (~> 1.0)
+    sidekiq (8.0.3)
+      connection_pool (>= 2.5.0)
+      json (>= 2.9.0)
+      logger (>= 1.6.2)
+      rack (>= 3.1.0)
+      redis-client (>= 0.23.2)
     solid_cable (3.0.8)
       actioncable (>= 7.2)
       activejob (>= 7.2)
@@ -428,6 +437,7 @@ PLATFORMS
 
 DEPENDENCIES
   activeadmin
+  bcrypt (~> 3.1.7)
   bootsnap
   brakeman
   cancancan
@@ -445,6 +455,7 @@ DEPENDENCIES
   rubocop-rails-omakase
   sassc-rails
   selenium-webdriver
+  sidekiq
   solid_cable
   solid_cache
   solid_queue
